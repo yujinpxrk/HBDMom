@@ -1,0 +1,67 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: 'Gowun Batang', serif;
+    background-color: #82bac4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Main Page (index.html) */
+.container {
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.letter-icon {
+    font-size: 10rem;
+    animation: float 2s infinite;
+    cursor: pointer;
+}
+
+/* Letter Animation */
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Letter Page (letter.html) */
+.letter-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.letter-page {
+    background: #faefed;
+    width: 80%;
+    max-width: 600px;
+    padding: 40px;
+    border: 2px solid #000;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    text-align: left;
+    box-shadow: none;
+}
+
+.content {
+    text-decoration: underline;
+}
+
+.greeting,
+.closing,
+.signature {
+    text-decoration: none;
+    font-style: normal;
+}
