@@ -19,10 +19,36 @@ a {
     color: inherit;
 }
 
-.letter-icon {
-    font-size: 10rem;
-    animation: float 2s infinite;
+/* General Icon Styling */
+.icon {
+    display: inline-block;
+    margin: 20px;
+    text-decoration: none;
     cursor: pointer;
+}
+
+/* Icon Specific Animations */
+.letter-icon, .gallery-icon, .resolution-icon {
+    font-size: 5rem;
+    animation: float 2s infinite;
+}
+
+.gallery-icon {
+    animation-delay: 0.2s;
+}
+
+.resolution-icon {
+    animation-delay: 0.4s; 
+}
+
+/* Float Animation */
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
 }
 
 /* Letter Animation */
@@ -35,24 +61,34 @@ a {
     }
 }
 
-/* Letter Page (letter.html) */
-.letter-container {
+/* General Page Styling for All Pages */
+.letter-container,
+.gallery-container,
+.resolution-container {
     display: flex;
     justify-content: center;
-    align-items: center;
-    height: 100vh;
+    align-items: flex-start;
+    min-height: 100vh;
+    padding: 20px;
+    box-sizing: border-box;
 }
 
-.letter-page {
+.letter-page,
+.gallery-page,
+.resolution-page {
     background: #faefed;
-    width: 80%;
-    max-width: 600px;
+    width: 700px;
+    max-width: 90%;
     padding: 40px;
     border: 2px solid #000;
     font-size: 1.2rem;
     line-height: 1.6;
     text-align: left;
+    overflow-y: auto;
     box-shadow: none;
+    box-sizing: border-box;
+    margin: auto;
+    display: block;
 }
 
 .content {
@@ -64,4 +100,103 @@ a {
 .signature {
     text-decoration: none;
     font-style: normal;
+}
+
+
+h1 {
+    margin-bottom: 20px;
+}
+
+a.back-link {
+    display: inline-block;
+    margin-top: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    color: #000;
+    padding: 10px 20px;
+    border: 2px solid #000;
+    border-radius: 5px;
+}
+
+a.back-link:hover {
+    background-color: #000;
+    color: #fff;
+}
+
+/* Carousel Styling */
+.carousel {
+    position: relative;
+    width: 700px;
+    max-width: 90%;
+    overflow: hidden;
+    margin: 20px auto;
+    border: 2px solid #000;
+    background: #fff;
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.slide {
+    min-width: 100%;
+    position: relative;
+    text-align: center;
+}
+
+.slide img {
+    width: 100%;
+    height: auto;
+    border: 2px solid #000;
+    border-radius: 5px;
+    display: block;
+}
+
+button.prev, button.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: none;
+    font-size: 2rem;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+button.prev {
+    left: 10px;
+}
+
+button.next {
+    right: 10px;
+}
+
+button.prev:hover, button.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Main Button Styling */
+.main-button {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #faefed;
+    color: #000;
+    font-size: 1rem;
+    font-family: 'Gowun Batang', serif;
+    padding: 10px 20px;
+    border: 2px solid #000;
+    text-decoration: none;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.main-button:hover {
+    background-color: #f8dada;
 }

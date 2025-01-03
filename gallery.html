@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Gowun+Batang&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="gallery-container">
+        <div class="gallery-page">
+            <h1>세령 유진 사진전</h1>
+            <div class="carousel">
+                <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+                <div class="slides">
+                    <img src="photo1.jpg" alt="Photo 1" class="slide">
+                    <img src="photo2.jpg" alt="Photo 2" class="slide">
+                    <img src="photo3.jpg" alt="Photo 3" class="slide">
+                    <img src="photo4.jpg" alt="Photo 4" class="slide">
+                    <img src="photo5.jpg" alt="Photo 5" class="slide">
+                    <img src="photo6.jpg" alt="Photo 6" class="slide">
+                    <img src="photo7.jpg" alt="Photo 7" class="slide">
+                    <img src="photo8.jpg" alt="Photo 8" class="slide">
+                    <img src="photo9.jpg" alt="Photo 9" class="slide">
+                </div>
+                <button class="next" onclick="moveSlide(1)">&#10095;</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+    <a href="index.html" class="main-button">뒤로가기</a>
+</body>
+</html>
